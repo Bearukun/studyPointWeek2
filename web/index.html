@@ -9,8 +9,64 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="script/script.js" type="text/javascript"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Webberino deluxe</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li> 
+                    <li><a href="#">Page 3</a></li> 
+                </ul>
+            </div>
+        </nav>
+        <div id="contianer">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h4>Enter new student:</h4>
+                    <form id="studentForm" action="#" method="POST">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="email" placeholder="E-mail"><br>
+                        <input type="text" name="phone" placeholder="Phone"><br>
+                        <!--<input type="text" name="category" placeholder="Category"><br>-->
+                        <input type="text" name="groupname" placeholder="Group name"><br>
+                        <select id="studentSelect">
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <input type="submit" name="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="col-sm-9">
+                    <center> <h4>Students</h4></center>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Full</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Group name</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
