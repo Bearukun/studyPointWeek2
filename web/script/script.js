@@ -1,9 +1,9 @@
 window.onload = function () {
 
     var students = [
-        {"name": "Hans", "email": "ha@mail.com", "phone": "29384756", "category": "Red", "groupname": "Los Gropos Maximus"},
-        {"name": "Grethe", "email": "gr@mail.com", "phone": "28394056", "category": "Yellow", "groupname": "Trunteklubben"},
-        {"name": "Lise", "email": "li@mail.com", "phone": "39483746", "category": "Green", "groupname": "Trunteklubben"}
+        {"name": "Hans", "email": "ha@mail.com", "phone": "29384756", "category": "Red", "groupname": "Group 2"},
+        {"name": "Grethe", "email": "gr@mail.com", "phone": "28394056", "category": "Yellow", "groupname": "Group 1"},
+        {"name": "Lise", "email": "li@mail.com", "phone": "39483746", "category": "Green", "groupname": "Group 1"}
     ];
 
     var tableBody = document.getElementById("studentTable");
@@ -17,10 +17,12 @@ window.onload = function () {
 
             //Creating the delete button
             var delButton = document.createElement("button");
+            
             delButton.className = "btn btn-danger";
             delButton.id = i + "delButton";
             delButton.onclick = function () {
                 deleteRow(this.id);
+                
             };
 
             var delButtonTxt = document.createTextNode("Delete");
@@ -57,7 +59,7 @@ window.onload = function () {
 
     var deleteAll = document.getElementById("deleteAll");
 
-    deleteAll.onclick = function (event) {
+    deleteAll.onclick = function () {
         students.length = 0;
         populateTable();
         
@@ -70,6 +72,5 @@ window.onload = function () {
         populateTable();
     
     };
-
 
 };
