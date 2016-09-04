@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Assignment 2</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
@@ -33,36 +28,38 @@ and open the template in the editor.
         </nav>
         <div id="contianer">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h4>Enter new student:</h4>
                     <form id="studentForm" action="#" method="POST">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="E-mail"><br>
-                        <input type="text" name="phone" placeholder="Phone"><br>
-                        <!--<input type="text" name="category" placeholder="Category"><br>-->
-                        <input type="text" name="groupname" placeholder="Group name"><br>
-                        <select id="studentSelect">
+                        <input type="text" name="name" placeholder="Name" class="form-control">
+                        <input type="text" name="email" placeholder="E-mail" class="form-control">
+                        <input type="text" name="phone" placeholder="Phone" class="form-control">
+                        <input type="text" name="groupname" placeholder="Group name" class="form-control">
+                        <select id="studentSelect" class="form-control">
                             <option value="red">Red</option>
                             <option value="yellow">Yellow</option>
                             <option value="green">Green</option>
                         </select>
-                        <input type="submit" name="submit" value="Submit">
+                        <br><input type="submit" name="submit" value="Submit" class="btn btn-default">
                     </form>
+                    <hr>
+                    <button id="deleteAll" class="btn btn-default">Delete all students</button><br><br>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-10">
                     <center> <h4>Students</h4></center>
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Full</th>
+                                <th>ID</th>
+                                <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Group name</th>
                                 <th>Category</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
                         <tbody id="studentTable">
-
                         </tbody>
                     </table>
                 </div>
